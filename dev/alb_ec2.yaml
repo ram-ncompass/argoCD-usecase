@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echoserver
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: echoserver
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: echoserver
+    spec:
+      containers:
+      - image: ramkumar58059/node-l2-image:latest
+        name: echoserver
+        ports:
+        - containerPort: 3002
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echoserver
+  namespace: default
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "external"
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: "instance"
+    service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"
+
+spec:
+  ports:
+  - port: 80
+    targetPort: 3002
+    protocol: TCP
+  type: LoadBalancer
+  selector:
+    app: echoserver
