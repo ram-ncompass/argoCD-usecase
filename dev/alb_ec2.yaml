@@ -14,7 +14,7 @@ spec:
         app: echoserver
     spec:
       containers:
-      - image: ramkumar58059/node-l2-image:latest
+      - image: ramkumar58059/node-l2-image:1.0.0
         name: echoserver
         ports:
         - containerPort: 3002

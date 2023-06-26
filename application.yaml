@@ -12,3 +12,11 @@ spec:
   destination:
     server: https://kubernetes.default.svc # endpoint of k8s api server
     namespace: default
+
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    
+    automated:
+      selfHeal: true
+      prune: true
