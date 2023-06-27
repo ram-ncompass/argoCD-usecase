@@ -14,7 +14,7 @@ spec:
         app: echoserver
     spec:
       containers:
-      - image: ramkumar58059/ram-java-docker-2:latest
+      - image: anatya/ram-java-docker-2:latest
         name: echoserver
         ports:
         - containerPort: 8080
