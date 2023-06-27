@@ -14,7 +14,7 @@ spec:
         app: echoserver
     spec:
       containers:
-      - image: anatya/ram-java-docker-2:latest
+      - image: 368355641188.dkr.ecr.ap-northeast-1.amazonaws.com/nodejs-ram:latest
         name: echoserver
         ports:
         - containerPort: 8080
