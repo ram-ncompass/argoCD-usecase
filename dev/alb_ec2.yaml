@@ -14,7 +14,11 @@ spec:
         app: echoserver
     spec:
       containers:
+<<<<<<< HEAD
       - image: ImageTag
+=======
+      - image: 368355641188.dkr.ecr.ap-northeast-1.amazonaws.com/368355641188.dkr.ecr.ap-northeast-1.amazonaws.com/nodejs-ram:20
+>>>>>>> 95ecfd96db79a41f7263365e40215475732f774d
         name: echoserver
         ports:
         - containerPort: 3002
