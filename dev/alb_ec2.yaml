@@ -17,7 +17,7 @@ spec:
       - image: 368355641188.dkr.ecr.ap-northeast-1.amazonaws.com/nodejs-ram:latest
         name: echoserver
         ports:
-        - containerPort: 8080
+        - containerPort: 3002
 ---
 apiVersion: v1
 kind: Service
@@ -32,7 +32,7 @@ metadata:
 spec:
   ports:
   - port: 80
-    targetPort: 8080
+    targetPort: 3002
     protocol: TCP
   type: LoadBalancer
   selector:
