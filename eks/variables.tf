@@ -13,7 +13,7 @@ variable "cluster_role_name" {
 }
 
 variable "config_path" {
-  default = "~/.kube/config"
+  default = "/var/lib/jenkins/.kube/config"
 }
 
 variable "config_context" {
