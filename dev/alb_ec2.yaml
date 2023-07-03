@@ -14,7 +14,7 @@ spec:
         app: echoserver
     spec:
       containers:
-      - image: 368355641188.dkr.ecr.ap-northeast-1.amazonaws.com/nodejs-ram:20
+      - image: 368355641188.dkr.ecr.ap-northeast-1.amazonaws.com/nodejs-ram:21
         name: echoserver
         ports:
         - containerPort: 3002
